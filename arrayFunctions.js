@@ -9,7 +9,15 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+
+  if (numbers.length%2 != 0 ) //odd
+  {
+    return true;
+  }
+  else //even
+  {
+    return false;
+  }
 }
 
 /**
@@ -23,7 +31,15 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+
+  if (numbers.length %2 == 0 )  //even
+  {
+    return true;
+  }
+  else //odd
+  {
+    return false;
+  }
 }
 
 /**
@@ -35,7 +51,9 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+
+  instructors.push("Laila");
+    return instructors;
 }
 
 /**
@@ -47,8 +65,13 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+
+  const lastOne = teams.pop(); //teams.pop removes last element in arrays but it also assigns it in lastOne  
+      return lastOne; //returns lastOne duh!!
+             // return(teams.pop()); another way to do this
+
 }
+
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -61,7 +84,15 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  
+  const half = (fruits.length / 2); 
+
+  if  (fruits.length%2===0)
+  {
+  return (fruits.splice(half)); //splice = change the content of your array by removing or replacing existing elements with new ones.
+  //splice (half) starts printing from the 2nd half of the array
+  }
+  else return ([]);
 }
 
 /**
@@ -77,10 +108,23 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * Hint:
  * - Use string method .slice()
  * - Use string method .endsWith()
+ * 
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  
+  while(shout.endsWith("!!"))
+  {
+      shout=shout.slice(0,shout.length-1);
+
+
+  }
+  //var n = shout.endsWith("!");
+return shout;
+ 
+
 }
+
+console.log(youGottaCalmDown("heloo!!!!!!!!!"));
 
 module.exports = {
   isArrayLengthOdd,
