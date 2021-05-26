@@ -118,8 +118,6 @@ function youGottaCalmDown(shout) {
   }
   //var n = shout.endsWith("!");
 return shout;
- 
-
 }
 
 console.log(youGottaCalmDown("heloo!!!!!!!!!"));
