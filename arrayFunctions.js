@@ -115,8 +115,6 @@ function youGottaCalmDown(shout) {
   while(shout.endsWith("!!"))
   {
       shout=shout.slice(0,shout.length-1);
-
-
   }
   //var n = shout.endsWith("!");
 return shout;
